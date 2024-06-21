@@ -1,5 +1,6 @@
-import { Button } from '@mui/material'
+import Button from '@mui/material/Button'
 import SvgIcon from '@mui/material/SvgIcon'
+import Typography from '@mui/material/Typography'
 import { pink } from '@mui/material/colors'
 
 function HomeIcon(props) {
@@ -13,6 +14,10 @@ function HomeIcon(props) {
 function App() {
   return (
     <>
+      <div>VietDoan</div>
+      <Typography variant='body2' color='text.secondary'>
+        VietDoan
+      </Typography>
       <Button variant='text'>Text</Button>
       <Button variant='contained'>Contained</Button>
       <Button variant='outlined'>Outlined</Button>
