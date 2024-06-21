@@ -26,6 +26,14 @@ module.exports = {
   rules: {
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: ['@mui/*/*/*']
+      }
+    ],
+
     'prettier/prettier': [
       'warn',
       {
