@@ -10,7 +10,8 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
 import Tooltip from '@mui/material/Tooltip'
-function BoardBar() {
+import { capitalizeFirstLetter } from '~/utils/formatters'
+function BoardBar({ board }) {
   return (
     <Box
       sx={{
@@ -41,7 +42,7 @@ function BoardBar() {
             }
           }}
           icon={<DashboardIcon />}
-          label='Viet Doan'
+          label={board?.title}
           clickable
         />
         <Chip
@@ -59,7 +60,7 @@ function BoardBar() {
             }
           }}
           icon={<VpnLockIcon />}
-          label='Public / Private Workspace'
+          label={capitalizeFirstLetter(board?.type)}
           clickable
         />
         <Chip
