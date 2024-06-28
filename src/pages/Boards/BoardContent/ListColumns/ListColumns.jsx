@@ -2,7 +2,7 @@ import { SortableContext, horizontalListSortingStrategy } from '@dnd-kit/sortabl
 import NoteAddIcon from '@mui/icons-material/NoteAdd'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import Columns from './Columns/Columns'
+import Column from './Columns/Column'
 
 export default function ListColumns({ columns }) {
   return (
@@ -21,7 +21,7 @@ export default function ListColumns({ columns }) {
         }}
       >
         {columns.map((column) => (
-          <Columns key={column._id} column={column} />
+          <Column key={column._id} column={column} />
         ))}
 
         {/* Add new column */}
